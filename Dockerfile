@@ -2,8 +2,8 @@ FROM tutum/apache-php
 
 	RUN apt-get update && apt-get install -yq git && rm -rf /var/lib/apt/lists/*
 	
-	RUN rm -rf /var/www/html
-	RUN git clone https://github.com/vube/vagrant-catalog /var/www/html
+	RUN rm -rf /var/www/html && git clone https://github.com/vube/vagrant-catalog /var/www/html
+	
 	COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 
 	WORKDIR /var/www/html
