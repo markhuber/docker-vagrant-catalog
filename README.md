@@ -9,7 +9,7 @@ The container assumes the Hashicorp Atlas folder structure and metadata.json fil
 
 ## Instructions
 To run:
-```bash
-docker run -d -p 80:80 -v /path/to/files:/var/www/html/files
+```
+docker run -d -p 80:80 -v /path/to/files:/var/www/html/files markhuber/vagrant-catalog
 ```
 
