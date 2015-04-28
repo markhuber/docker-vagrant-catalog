@@ -9,6 +9,7 @@ FROM tutum/apache-php
 	WORKDIR /var/www/html
 	RUN composer update
 	RUN mv config.php.dist config.php
+	RUN rm index.html
 	
 	EXPOSE 80
 	WORKDIR /app
